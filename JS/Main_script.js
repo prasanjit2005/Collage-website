@@ -76,7 +76,33 @@ dateElement.forEach(element => {
 });
 
 // Highlight crousel js
-const carousel = document.getElementById('carousel');
+const carousel = document.getElementById('highlight-carousel');
 carousel.addEventListener('touchstart', () => carousel.classList.add('pause'));
 carousel.addEventListener('touchend', () => carousel.classList.remove('pause'));
+// console.log(document.querySelector('.navbar'));
 
+
+// // scroll content change 
+const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) { // Adjust the scroll threshold as needed
+            navbar.classList.add('fixed');
+            
+            
+        } else {
+            navbar.classList.remove('fixed');
+        }
+    });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoImage = document.querySelector('.logo img');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            logoImage.style.width = '40%';
+        } else {
+            logoImage.style.width = ''; // Reset to default width
+        }
+    });
+});

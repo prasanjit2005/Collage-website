@@ -162,6 +162,19 @@
     /* Fully transparent background */
     /* backdrop-filter: blur(10px); */
     z-index: 3;
+    transition: all 0.3s;
+}
+
+.navbar.fixed {
+        position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(0 0 0 / 69%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 12px 100px;
+    height: 5rem;
 }
 
 .navbar .logo {
@@ -171,7 +184,7 @@
 }
 
 .navbar .logo img {
-    max-width: 100px;
+    max-width: 50%;
     /* Adjust the width as needed */
     height: auto;
 }
