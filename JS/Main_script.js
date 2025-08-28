@@ -75,3 +75,8 @@ dateElement.forEach(element => {
     element.textContent = today.toLocaleDateString(undefined, options);
 });
 
+// Highlight crousel js
+const carousel = document.getElementById('carousel');
+carousel.addEventListener('touchstart', () => carousel.classList.add('pause'));
+carousel.addEventListener('touchend', () => carousel.classList.remove('pause'));
+
