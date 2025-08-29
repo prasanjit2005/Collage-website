@@ -1,0 +1,65 @@
+:root{
+      --primary:#0f4c81;
+      --secondary:#2563eb;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f3f6fb;
+      --glass: rgba(255,255,255,0.65);
+      --radius:14px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:linear-gradient(180deg,var(--bg),#fff);color:#0b1220;line-height:1.6;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+
+    header{display:flex;gap:16px;align-items:center;flex-wrap:wrap;animation:fadeDown .8s ease}
+    .logo{width:60px;height:60px;border-radius:12px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;flex-shrink:0;box-shadow:0 4px 10px rgba(0,0,0,0.15)}
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin-top:6px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:28px}
+
+    .card{background:var(--card);padding:18px;border-radius:16px;box-shadow:0 6px 18px rgba(12,30,60,0.08);display:flex;flex-direction:column;transition:transform .3s ease, box-shadow .3s ease, background .3s ease;animation:fadeUp .9s ease}
+    .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 10px 28px rgba(12,30,60,0.2);background:#fdfefe}
+    .card img{width:100%;height:170px;object-fit:cover;border-radius:12px;transition:transform .4s ease}
+    .card:hover img{transform:scale(1.05)}
+    .card h3{margin:12px 0 6px;font-size:20px;color:var(--primary)}
+    .meta{color:var(--muted);font-size:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:#eef6ff;color:var(--primary);padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600;transition:background .3s}
+    .tag:hover{background:var(--secondary);color:#fff}
+    .actions{margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{padding:8px 14px;border-radius:10px;border:0;cursor:pointer;font-size:14px;transition:background .3s, transform .2s}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-primary:hover{background:var(--secondary);transform:scale(1.05)}
+    .btn-ghost{background:transparent;border:1px solid rgba(11,18,32,0.15)}
+    .btn-ghost:hover{background:rgba(15,76,129,0.08)}
+
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(6,12,24,0.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:50;animation:fadeIn .4s ease}
+    .modal{max-width:760px;width:100%;max-height:80vh;overflow-y:auto;background:white;padding:22px;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.25);animation:scaleUp .4s ease}
+
+    /* Animations */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes scaleUp{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+
+    /* Responsive typography */
+    @media (max-width:768px){
+      h1{font-size:22px}
+      .card img{height:150px}
+    }
+    @media (max-width:480px){
+      .logo{width:48px;height:48px;font-size:16px}
+      h1{font-size:20px}
+      .btn{width:100%;text-align:center}
+    }
+
+    footer{
+        margin:40px 0 20px;
+        color:var(--muted);
+        font-size:13px;
+        text-align:center;
+        animation:fadeUp 1.2s ease
+    }

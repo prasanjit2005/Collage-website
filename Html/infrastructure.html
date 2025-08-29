@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>College Facilities & Infrastructure</title>
+  <link href="../CSS/infra.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">BC</div>
+      <div>
+        <h1>Facilities & Infrastructure</h1>
+        <p class="lead">Overview of the college's facilities ensuring a supportive learning environment.</p>
+      </div>
+    </header>
+
+    <section>
+      <div class="grid">
+        <!-- Card: Library & e-resources -->
+        <article class="card" data-key="library">
+          <img src="https://via.placeholder.com/640x360?text=Library" alt="Library and e-resources">
+          <h3>Library &amp; e-resources</h3>
+          <div class="meta">Well-stocked stacks, reading rooms, online journals &amp; digital databases.</div>
+          <div class="tags">
+            <span class="tag">Reading Halls</span>
+            <span class="tag">Digital Access</span>
+            <span class="tag">Journals</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="library">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Library & e-resources')">Save</button>
+          </div>
+        </article>
+
+        <!-- Card: Laboratories & workshops -->
+        <article class="card" data-key="labs">
+          <img src="https://via.placeholder.com/640x360?text=Laboratory" alt="Laboratories and workshops">
+          <h3>Laboratories &amp; Workshops</h3>
+          <div class="meta">Subject-specific labs, hands-on workshops and safety-trained staff.</div>
+          <div class="tags">
+            <span class="tag">Physics</span>
+            <span class="tag">Chemistry</span>
+            <span class="tag">Biotech</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="labs">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Laboratories & workshops')">Save</button>
+          </div>
+        </article>
+
+        <!-- Card: Computer center & WiFi -->
+        <article class="card" data-key="computer">
+          <img src="https://via.placeholder.com/640x360?text=Computer+Center" alt="Computer center and WiFi">
+          <h3>Computer Center &amp; WiFi</h3>
+          <div class="meta">High-speed internet across campus, computer labs and software resources.</div>
+          <div class="tags">
+            <span class="tag">Free WiFi</span>
+            <span class="tag">Lab Access</span>
+            <span class="tag">Software</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="computer">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Computer center & WiFi')">Save</button>
+          </div>
+        </article>
+
+        <!-- Card: Auditorium & seminar halls -->
+        <article class="card" data-key="auditorium">
+          <img src="https://via.placeholder.com/640x360?text=Auditorium" alt="Auditorium and seminar halls">
+          <h3>Auditorium &amp; Seminar Halls</h3>
+          <div class="meta">Large auditorium and smaller seminar rooms with AV support.</div>
+          <div class="tags">
+            <span class="tag">AV Support</span>
+            <span class="tag">Seating 600+</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="auditorium">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Auditorium & seminar halls')">Save</button>
+          </div>
+        </article>
+
+        <!-- Card: Hostel & transport facilities -->
+        <article class="card" data-key="hostel">
+          <img src="https://via.placeholder.com/640x360?text=Hostel" alt="Hostel and transport facilities">
+          <h3>Hostel &amp; Transport</h3>
+          <div class="meta">On-campus hostel and college-operated transport for major routes.</div>
+          <div class="tags">
+            <span class="tag">24/7 Security</span>
+            <span class="tag">Transport</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="hostel">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Hostel & transport facilities')">Save</button>
+          </div>
+        </article>
+
+        <!-- Card: Sports and recreation -->
+        <article class="card" data-key="sports">
+          <img src="https://via.placeholder.com/640x360?text=Sports" alt="Sports and recreation">
+          <h3>Sports &amp; Recreation</h3>
+          <div class="meta">Playgrounds, indoor courts, gymnasium and organized sports events.</div>
+          <div class="tags">
+            <span class="tag">Football</span>
+            <span class="tag">Gym</span>
+            <span class="tag">Yoga</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="sports">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Sports and recreation')">Save</button>
+          </div>
+        </article>
+
+        <!-- Card: Canteen -->
+        <article class="card" data-key="canteen">
+          <img src="https://via.placeholder.com/640x360?text=Canteen" alt="College Canteen">
+          <h3>Canteen</h3>
+          <div class="meta">Hygienic food, refreshments and a vibrant space for students to relax.</div>
+          <div class="tags">
+            <span class="tag">Healthy Meals</span>
+            <span class="tag">Snacks</span>
+            <span class="tag">Coffee</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open="canteen">Read details</button>
+            <button class="btn btn-ghost" onclick="bookmark('Canteen')">Save</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <small>© Biswanath College — Facilities information. Designed with responsive design and animations.</small>
+    </footer>
+  </div>
+
+  <!-- Modal markup -->
+  <div id="modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" id="modal-content">
+      <button onclick="closeModal()" aria-label="Close" style="float:right;background:none;border:none;font-size:18px;cursor:pointer">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+</body>
+<script src="../JS/script.js"></script>
+</html>

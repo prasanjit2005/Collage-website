@@ -368,7 +368,7 @@
 }
 
 
-.card {
+.highlight-card {
     width: 280px;
     flex: 0 0 auto;
     background: #fff;
@@ -381,13 +381,13 @@
     /* justify-content: center; */
 }
 
-.card .media img {
+.highlight-card .media img {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.card .body {
+.highlight-card .body {
     padding: 14px;
     display: flex;
     align-items: center;
@@ -395,14 +395,14 @@
     flex-direction: column;
 }
 
-.card h3 {
+.highlight-card h3 {
     margin: 0 0 8px 0;
     font-size: 1.05rem;
     font-weight: 500;
     color: #ffbb00;
 }
 
-.card p {
+.highlight-card p {
     margin: 0;
     font-size: 1rem;
     font-weight: 300;
@@ -455,14 +455,14 @@
 
 
 @media (max-width: 760px) {
-    .card {
+    .highlight-card {
         width: 220px;
     }
 }
 
 .Body-name {
-    /* border: 2px solid red; */
-    width: 80%;
+    /* border: 2px solid red;  */
+     width: 80%;
     height: 18rem;
     display: flex;
     align-items: center;
@@ -472,13 +472,13 @@
     margin-top: 2rem;
 }
 
-.Body-name h3 {
+.Body-name h3 { 
     /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; */
+    flex-direction: column;  */
     /* border: 2px solid blue; */
-    width: 30%;
+     width: 30%;
     font-weight: 600;
 }
 
@@ -579,7 +579,7 @@
 }
 
 /* Developer option  */
-.main-wrapper {
+ .main-wrapper {
     font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     background: #f3f6fb;
     padding: 40px;
@@ -689,7 +689,7 @@ p.lead {
     flex: 1
 }
 
-.title {
+.dev-title {
     font-weight: 600;
     font-size: 15px;
     color: #07103a;
@@ -739,4 +739,97 @@ p.lead {
 .fade-right {
     right: 0;
     background: linear-gradient(270deg, #f3f6fb, rgba(255, 255, 255, 0));
+} 
+/* footer part  */
+.test {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  background: #222;
+  color: #fafafa;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .content .logo {
+  font-size: 40px;
+  text-align: center;
+}
+footer .content p {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+footer .content .sm,
+footer .content .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+footer .content .links {
+  flex-wrap: wrap;
+}
+footer .content .sm li {
+  margin: 15px;
+}
+footer .content .links li {
+  margin: 0 12px;
+  margin-bottom: 10px;
+}
+footer .content .links li a,
+footer .content .sm li a {
+  color: #fafafa;
+  transition: 0.3s ease;
+}
+footer .content .sm li a {
+  font-size: 25px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+footer .content .sm li a:hover {
+  background: #fafafa;
+  color: #222;
+  border-radius: 10px;
+}
+footer .content .links li a:hover {
+  opacity: 0.5;
+}
+footer .copyright {
+  text-align: center;
+  padding-top: 20px;
+  width: 100%;
+  border-top: 1px solid #555;
+}
+@media screen and (max-width: 500px) {
+  footer {
+    width: 100%;
+  }
+  footer .content .logo {
+    font-size: 30px;
+  }
+  footer .content p {
+    padding: 15px;
+  }
+  footer .content .sm li a {
+    padding: 5px;
+  }
+}
+.sm li a img{
+    width: 75%;
+    filter: invert(1);
+
 }

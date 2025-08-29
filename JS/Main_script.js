@@ -135,3 +135,7 @@ track.style.animationDuration = duration + 's';
 
 window.addEventListener('load', ()=>{ recompute(); });
 window.addEventListener('resize', ()=>{ recompute(); });
+
+
+// footer part js 
+document.getElementById("year").innerHTML = new Date().getFullYear();
